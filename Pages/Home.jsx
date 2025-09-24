@@ -59,7 +59,7 @@ export default function Home() {
             <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
               <span className="sonder-text-gradient">Transforming</span>
               <br />
-              <span className="text-slate-800">African Commodities</span>
+              <span className="text-[var(--sonder-dark-text)]">African Commodities</span>
             </h1>
             <p className="text-xl lg:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
               Harnessing blockchain technology to create transparent, ethical, and efficient 
@@ -70,7 +70,7 @@ export default function Home() {
               <Link to={createPageUrl("Invest")}>
                 <Button 
                   size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
+                  className="bg-[var(--sonder-teal)] hover:bg-[var(--sonder-green)] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
                 >
                   Start Investing
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -80,7 +80,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-2 border-slate-300 text-slate-700 px-8 py-4 text-lg font-semibold rounded-full hover:bg-white hover:shadow-lg transition-all duration-200"
+                  className="border-2 border-slate-300 text-[var(--sonder-dark-text)] px-8 py-4 text-lg font-semibold rounded-full hover:bg-white hover:shadow-lg transition-all duration-200"
                 >
                   Learn More
                 </Button>
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-r from-white to-blue-50/50">
+      <section className="py-20 bg-gradient-to-r from-white to-teal-50/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -100,7 +100,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--sonder-dark-text)] mb-6">
               Blockchain <span className="sonder-text-gradient">Innovation</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -123,7 +123,7 @@ export default function Home() {
                     <div className="w-16 h-16 sonder-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
                       <feature.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-4">{feature.title}</h3>
+                    <h3 className="text-2xl font-bold text-[var(--sonder-dark-text)] mb-4">{feature.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-50 to-amber-50/50">
+      <section className="py-20 bg-gradient-to-r from-slate-50 to-orange-50/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -143,7 +143,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-8">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[var(--sonder-dark-text)] mb-8">
                 Measurable <span className="sonder-text-gradient">Impact</span>
               </h2>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
@@ -161,7 +161,7 @@ export default function Home() {
                     viewport={{ once: true }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[var(--sonder-green)] flex-shrink-0" />
                     <span className="text-slate-700 font-medium">{benefit}</span>
                   </motion.div>
                 ))}
@@ -178,21 +178,21 @@ export default function Home() {
               <Card className="glass-effect border-0 shadow-2xl p-8">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-[var(--sonder-teal)] rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Layers className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold sonder-text-gradient mb-2">15-25%</h3>
                     <p className="text-slate-600 font-medium">Premium for Verified Sustainable Commodities</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-[var(--sonder-orange)] rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold sonder-text-gradient mb-2">30%</h3>
                     <p className="text-slate-600 font-medium">Reduction in Price Discrepancies</p>
                   </div>
                   <div className="text-center col-span-2">
-                    <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-[var(--sonder-green)] rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold sonder-text-gradient mb-2">$20-30M</h3>
@@ -217,7 +217,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform African Markets?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-xl text-teal-100 mb-8 leading-relaxed">
               Join us in building transparent, ethical, and efficient commodity 
               markets that benefit everyone in the value chain.
             </p>
@@ -225,7 +225,7 @@ export default function Home() {
               <Link to={createPageUrl("Invest")}>
                 <Button 
                   size="lg" 
-                  className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
+                  className="bg-white text-[var(--sonder-teal)] hover:bg-teal-50 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
                 >
                   Explore Investment
                   <TrendingUp className="ml-2 w-5 h-5" />
@@ -235,7 +235,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-2 border-white text-white px-8 py-4 text-lg font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-200"
+                  className="border-2 border-white text-white px-8 py-4 text-lg font-semibold rounded-full hover:bg-white hover:text-[var(--sonder-teal)] transition-all duration-200"
                 >
                   Meet the Team
                 </Button>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +21,36 @@ export default function About() {
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       bio: "Technical innovator specializing in distributed systems and smart contract development. Expert in scaling blockchain solutions for emerging markets.",
       expertise: ["Blockchain Development", "Smart Contracts", "System Architecture", "Fintech Solutions"],
+      education: "Bachelors in Business, Boston College",
+      location: "Boston, MA"
+    }
+  ];
+
+  const keyTeam = [
+    {
+      name: "Sean Radimer",
+      role: "Chief Data Officer",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+      bio: "Data science expert with deep expertise in analytics and machine learning applications for commodity markets. Leads our data strategy and insights platform.",
+      expertise: ["Data Analytics", "Machine Learning", "Market Intelligence", "Predictive Modeling"],
+      education: "Bachelors in Business, Boston College",
+      location: "Boston, MA"
+    },
+    {
+      name: "Chelsea Boruff",
+      role: "Head of Growth",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b2ad?w=400&h=400&fit=crop&crop=face",
+      bio: "Growth strategist with proven track record in scaling technology companies across emerging markets. Drives our market expansion and partnership initiatives.",
+      expertise: ["Growth Strategy", "Market Expansion", "Partnership Development", "Customer Acquisition"],
+      education: "Bachelors in Business, Boston College",
+      location: "Boston, MA"
+    },
+    {
+      name: "Arham Shah",
+      role: "Chief Financial Officer",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+      bio: "Financial executive with extensive experience in venture capital and emerging market investments. Oversees financial strategy and investor relations.",
+      expertise: ["Financial Strategy", "Investment Analysis", "Risk Management", "Capital Markets"],
       education: "Bachelors in Business, Boston College",
       location: "Boston, MA"
     }
@@ -56,85 +85,169 @@ export default function About() {
           className="text-center mb-20"
         >
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            Meet the <span className="sonder-text-gradient">Visionaries</span>
+            Meet the <span className="sonder-text-gradient">Team</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Our founding team combines deep technical expertise with extensive market knowledge 
+            Our leadership team combines deep technical expertise with extensive market knowledge 
             to deliver blockchain solutions that transform African commodity markets.
           </p>
         </motion.div>
 
         {/* Founders Section */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          {founders.map((founder, index) => (
-            <motion.div
-              key={founder.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
-              <Card className="glass-effect border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <img 
-                      src={founder.image}
-                      alt={founder.name}
-                      className="w-full h-80 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6 text-white">
-                      <h3 className="text-3xl font-bold mb-2">{founder.name}</h3>
-                      <p className="text-lg opacity-90">{founder.role}</p>
+        <div className="mb-20">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            <span className="sonder-text-gradient">Co-Founders</span>
+          </motion.h2>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {founders.map((founder, index) => (
+              <motion.div
+                key={founder.name}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+              >
+                <Card className="glass-effect border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <img 
+                        src={founder.image}
+                        alt={founder.name}
+                        className="w-full h-80 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-6 left-6 text-white">
+                        <h3 className="text-3xl font-bold mb-2">{founder.name}</h3>
+                        <p className="text-lg opacity-90">{founder.role}</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="p-8">
-                    <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                      {founder.bio}
-                    </p>
                     
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-semibold text-slate-800 mb-2">Expertise</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {founder.expertise.map((skill) => (
-                            <Badge 
-                              key={skill} 
-                              variant="secondary"
-                              className="bg-blue-100 text-blue-800 hover:bg-blue-200"
-                            >
-                              {skill}
-                            </Badge>
-                          ))}
+                    <div className="p-8">
+                      <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                        {founder.bio}
+                      </p>
+                      
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-semibold text-[var(--sonder-dark-text)] mb-2">Expertise</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {founder.expertise.map((skill) => (
+                              <Badge 
+                                key={skill} 
+                                variant="secondary"
+                                className="bg-teal-100 text-[var(--sonder-teal)] hover:bg-teal-200"
+                              >
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center text-slate-600">
+                          <Award className="w-5 h-5 mr-2" />
+                          <span>{founder.education}</span>
+                        </div>
+                        
+                        <div className="flex items-center text-slate-600">
+                          <MapPin className="w-5 h-5 mr-2" />
+                          <span>{founder.location}</span>
+                        </div>
+                        
+                        <div className="flex space-x-4 pt-2">
+                          <button className="flex items-center space-x-2 text-[var(--sonder-teal)] hover:text-[var(--sonder-green)] transition-colors">
+                            <Linkedin className="w-5 h-5" />
+                            <span>LinkedIn</span>
+                          </button>
+                          <button className="flex items-center space-x-2 text-[var(--sonder-teal)] hover:text-[var(--sonder-green)] transition-colors">
+                            <Mail className="w-5 h-5" />
+                            <span>Email</span>
+                          </button>
                         </div>
                       </div>
-                      
-                      <div className="flex items-center text-slate-600">
-                        <Award className="w-5 h-5 mr-2" />
-                        <span>{founder.education}</span>
-                      </div>
-                      
-                      <div className="flex items-center text-slate-600">
-                        <MapPin className="w-5 h-5 mr-2" />
-                        <span>{founder.location}</span>
-                      </div>
-                      
-                      <div className="flex space-x-4 pt-2">
-                        <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors">
-                          <Linkedin className="w-5 h-5" />
-                          <span>LinkedIn</span>
-                        </button>
-                        <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors">
-                          <Mail className="w-5 h-5" />
-                          <span>Email</span>
-                        </button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Key Team Section */}
+        <div className="mb-20">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            <span className="sonder-text-gradient">Leadership Team</span>
+          </motion.h2>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {keyTeam.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="glass-effect border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 text-white">
+                        <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
+                        <p className="text-sm opacity-90">{member.role}</p>
                       </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                    
+                    <div className="p-6">
+                      <p className="text-slate-600 leading-relaxed mb-4">
+                        {member.bio}
+                      </p>
+                      
+                      <div className="space-y-3">
+                        <div>
+                          <h4 className="font-semibold text-[var(--sonder-dark-text)] mb-2 text-sm">Expertise</h4>
+                          <div className="flex flex-wrap gap-1">
+                            {member.expertise.map((skill) => (
+                              <Badge 
+                                key={skill} 
+                                variant="secondary"
+                                className="bg-teal-100 text-[var(--sonder-teal)] hover:bg-teal-200 text-xs"
+                              >
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center text-slate-600 text-sm">
+                          <Award className="w-4 h-4 mr-2" />
+                          <span>{member.education}</span>
+                        </div>
+                        
+                        <div className="flex items-center text-slate-600 text-sm">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          <span>{member.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Values Section */}
@@ -185,7 +298,7 @@ export default function About() {
           <Card className="sonder-gradient border-0 shadow-2xl">
             <CardContent className="p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-xl text-teal-100 leading-relaxed max-w-4xl mx-auto">
                 To revolutionize African commodity markets through blockchain technology, 
                 creating transparent, ethical, and efficient trading systems that empower 
                 local communities, ensure fair compensation for producers, and deliver 

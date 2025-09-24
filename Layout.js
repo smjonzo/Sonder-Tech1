@@ -15,23 +15,26 @@ export default function Layout({ children, currentPageName }) {
   ];
 
   const isActive = (url) => location.pathname === url;
+  const newLogoUrl = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689e48f33b2360ca4ea8053c/968a98002_IMG_2463.JPEG";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-amber-50">
+    <div className="min-h-screen bg-[var(--sonder-light-bg)] text-[var(--sonder-dark-text)]">
       <style>{`
         :root {
-          --sonder-navy: #0f172a;
-          --sonder-blue: #1e40af;
-          --sonder-gold: #d97706;
-          --sonder-light: #f8fafc;
+          --sonder-teal: #2d8a9d;
+          --sonder-green: #6aa979;
+          --sonder-orange: #f2a649;
+          --sonder-dark-text: #3c4e62;
+          --sonder-light-bg: #f0f5f4;
+          --sonder-light-text: #f8fafc;
         }
         
         .sonder-gradient {
-          background: linear-gradient(135deg, var(--sonder-navy) 0%, var(--sonder-blue) 50%, var(--sonder-gold) 100%);
+          background: linear-gradient(135deg, var(--sonder-teal) 0%, var(--sonder-green) 50%, var(--sonder-orange) 100%);
         }
         
         .sonder-text-gradient {
-          background: linear-gradient(135deg, var(--sonder-blue), var(--sonder-gold));
+          background: linear-gradient(135deg, var(--sonder-teal), var(--sonder-green), var(--sonder-orange));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -39,21 +42,24 @@ export default function Layout({ children, currentPageName }) {
         
         .glass-effect {
           backdrop-filter: blur(20px);
-          background: rgba(255, 255, 255, 0.85);
-          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: rgba(240, 245, 244, 0.85);
+          border-color: rgba(60, 78, 98, 0.1);
         }
       `}</style>
 
       {/* Header */}
-      <header className="glass-effect border-b border-white/20 sticky top-0 z-50">
+      <header className="glass-effect border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 sonder-gradient rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <div>
+               <div className="w-12 h-12 rounded-lg overflow-hidden" style={{
+                 backgroundImage: `url(${newLogoUrl})`,
+                 backgroundSize: '300%',
+                 backgroundPosition: 'center 30%',
+                 backgroundRepeat: 'no-repeat',
+               }}></div>
+               <div>
                 <h1 className="text-2xl font-bold sonder-text-gradient">Sonder Tech</h1>
                 <p className="text-xs text-slate-600 -mt-1">Blockchain Innovation</p>
               </div>
@@ -67,8 +73,8 @@ export default function Layout({ children, currentPageName }) {
                   to={item.url}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                     isActive(item.url)
-                      ? "bg-blue-600 text-white shadow-lg"
-                      : "text-slate-700 hover:text-blue-600 hover:bg-white/60"
+                      ? "bg-[var(--sonder-dark-text)] text-white shadow-lg"
+                      : "text-[var(--sonder-dark-text)] hover:text-[var(--sonder-teal)] hover:bg-white/60"
                   }`}
                 >
                   <item.icon className="w-4 h-4" />
@@ -103,7 +109,7 @@ export default function Layout({ children, currentPageName }) {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
                       isActive(item.url)
-                        ? "bg-blue-600 text-white"
+                        ? "bg-[var(--sonder-dark-text)] text-white"
                         : "text-slate-700 hover:bg-white/60"
                     }`}
                   >
@@ -123,13 +129,16 @@ export default function Layout({ children, currentPageName }) {
       </main>
 
       {/* Footer */}
-      <footer className="glass-effect border-t border-white/20 mt-20">
+      <footer className="glass-effect border-t mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <div className="w-10 h-10 sonder-gradient rounded-lg flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-white" />
-              </div>
+               <div className="w-10 h-10 rounded-lg overflow-hidden" style={{
+                 backgroundImage: `url(${newLogoUrl})`,
+                 backgroundSize: '300%',
+                 backgroundPosition: 'center 30%',
+                 backgroundRepeat: 'no-repeat',
+               }}></div>
               <h3 className="text-xl font-bold sonder-text-gradient">Sonder Tech</h3>
             </div>
             <p className="text-slate-600 mb-6 max-w-md mx-auto">

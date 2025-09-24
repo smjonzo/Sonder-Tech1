@@ -97,17 +97,17 @@ export default function Invest() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+            <div className="w-20 h-20 bg-[var(--sonder-green)] rounded-full flex items-center justify-center mx-auto mb-8">
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl font-bold text-slate-800 mb-6">Thank You for Your Interest!</h1>
+            <h1 className="text-4xl font-bold text-[var(--sonder-dark-text)] mb-6">Thank You for Your Interest!</h1>
             <p className="text-xl text-slate-600 mb-8">
               We've received your investment inquiry and our team will be in touch within 24 hours 
               to discuss the opportunity in detail.
             </p>
             <Button 
               onClick={() => setSubmitSuccess(false)}
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-[var(--sonder-teal)] hover:bg-[var(--sonder-green)]"
             >
               Submit Another Inquiry
             </Button>
@@ -168,7 +168,7 @@ export default function Invest() {
             <Card className="glass-effect border-0 shadow-xl">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold flex items-center gap-3">
-                  <DollarSign className="w-8 h-8 text-blue-600" />
+                  <DollarSign className="w-8 h-8 text-[var(--sonder-teal)]" />
                   Express Your Interest
                 </CardTitle>
                 <p className="text-slate-600">
@@ -267,7 +267,7 @@ export default function Invest() {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting || !formData.name || !formData.email}
-                    className="w-full bg-blue-600 hover:bg-blue-700 py-3 text-lg font-semibold"
+                    className="w-full bg-[var(--sonder-teal)] hover:bg-[var(--sonder-green)] py-3 text-lg font-semibold"
                   >
                     {isSubmitting ? (
                       "Submitting..."
@@ -294,16 +294,16 @@ export default function Invest() {
             <Card className="glass-effect border-0 shadow-xl">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
-                  <BarChart3 className="w-6 h-6 text-blue-600" />
+                  <BarChart3 className="w-6 h-6 text-[var(--sonder-teal)]" />
                   Projected Returns
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {projectedReturns.map((projection, index) => (
-                    <div key={projection.year} className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-50 to-amber-50 rounded-lg">
+                    <div key={projection.year} className="flex justify-between items-center p-4 bg-gradient-to-r from-teal-50/50 to-orange-50/50 rounded-lg">
                       <div>
-                        <h4 className="font-semibold text-slate-800">{projection.year}</h4>
+                        <h4 className="font-semibold text-[var(--sonder-dark-text)]">{projection.year}</h4>
                         <p className="text-sm text-slate-600">{projection.growth}</p>
                       </div>
                       <div className="text-right">
@@ -319,37 +319,37 @@ export default function Invest() {
             <Card className="glass-effect border-0 shadow-xl">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
-                  <Users className="w-6 h-6 text-blue-600" />
+                  <Users className="w-6 h-6 text-[var(--sonder-teal)]" />
                   Why Invest with Sonder?
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[var(--sonder-green)] mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-slate-800">Market Leadership</p>
+                      <p className="font-semibold text-[var(--sonder-dark-text)]">Market Leadership</p>
                       <p className="text-sm text-slate-600">First-mover advantage in blockchain commodity solutions</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[var(--sonder-green)] mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-slate-800">Proven Technology</p>
+                      <p className="font-semibold text-[var(--sonder-dark-text)]">Proven Technology</p>
                       <p className="text-sm text-slate-600">Cutting-edge blockchain infrastructure built for scale</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[var(--sonder-green)] mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-slate-800">Social Impact</p>
+                      <p className="font-semibold text-[var(--sonder-dark-text)]">Social Impact</p>
                       <p className="text-sm text-slate-600">Direct positive impact on African communities and producers</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[var(--sonder-green)] mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-slate-800">Experienced Team</p>
+                      <p className="font-semibold text-[var(--sonder-dark-text)]">Experienced Team</p>
                       <p className="text-sm text-slate-600">Led by experts in blockchain technology and African markets</p>
                     </div>
                   </div>

@@ -1,49 +1,49 @@
-{
-  "name": "InvestmentInterest",
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "Full name of interested investor"
+  {
+    "name": "InvestmentInterest",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Full name of interested investor"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Email address"
+      },
+      "phone": {
+        "type": "string",
+        "description": "Phone number"
+      },
+      "investment_amount": {
+        "type": "string",
+        "enum": [
+          "under_100k",
+          "100k_500k",
+          "500k_1m",
+          "1m_5m",
+          "over_5m"
+        ],
+        "description": "Investment range interested in"
+      },
+      "investor_type": {
+        "type": "string",
+        "enum": [
+          "individual",
+          "institutional",
+          "family_office",
+          "vc_fund",
+          "other"
+        ],
+        "description": "Type of investor"
+      },
+      "message": {
+        "type": "string",
+        "description": "Additional message or questions"
+      }
     },
-    "email": {
-      "type": "string",
-      "format": "email",
-      "description": "Email address"
-    },
-    "phone": {
-      "type": "string",
-      "description": "Phone number"
-    },
-    "investment_amount": {
-      "type": "string",
-      "enum": [
-        "under_100k",
-        "100k_500k",
-        "500k_1m",
-        "1m_5m",
-        "over_5m"
-      ],
-      "description": "Investment range interested in"
-    },
-    "investor_type": {
-      "type": "string",
-      "enum": [
-        "individual",
-        "institutional",
-        "family_office",
-        "vc_fund",
-        "other"
-      ],
-      "description": "Type of investor"
-    },
-    "message": {
-      "type": "string",
-      "description": "Additional message or questions"
-    }
-  },
-  "required": [
-    "name",
-    "email"
-  ]
-}
+    "required": [
+      "name",
+      "email"
+    ]
+  }
