@@ -56,7 +56,7 @@ export default function Layout({ children, currentPageName }) {
                <div className="w-12 h-12 rounded-lg overflow-hidden" style={{
                  backgroundImage: `url(${newLogoUrl})`,
                  backgroundSize: '300%',
-                 backgroundPosition: 'center 30%',
+                 backgroundPosition: 'center 25%',
                  backgroundRepeat: 'no-repeat',
                }}></div>
                <div>
