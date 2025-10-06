@@ -8,14 +8,14 @@ export default function About() {
   const founders = [
     {
       name: "Aman Solomon",
-      role: "Co-Founder & CEO",
+      role: "Co-Founder & Operating Partner",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       bio: "Visionary leader with extensive experience in blockchain technology and African markets. Previously led digital transformation initiatives across emerging economies.",
       expertise: ["Blockchain Strategy", "Market Development", "Strategic Partnerships", "Regulatory Affairs"]
     },
     {
       name: "Musaab Malik",
-      role: "Co-Founder & CTO",
+      role: "Co-Founder & Operating Partner",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       bio: "Technical innovator specializing in distributed systems and smart contract development. Expert in scaling blockchain solutions for emerging markets.",
       expertise: ["Blockchain Development", "Smart Contracts", "System Architecture", "Fintech Solutions"]
@@ -25,21 +25,21 @@ export default function About() {
   const keyTeam = [
     {
       name: "Sean Radimer",
-      role: "Chief Data Officer",
+      role: "CDO",
       image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d402ae8a7ea0c2116f6cc2/5420cc23b_85846171_w47ra7gx2z.pdf",
       bio: "Data science expert with deep expertise in analytics and machine learning applications for commodity markets. Leads our data strategy and insights platform.",
       expertise: ["Data Analytics", "Machine Learning", "Market Intelligence", "Predictive Modeling"]
     },
     {
       name: "Chelsea Boruff",
-      role: "Head of Growth",
+      role: "CGO",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b2ad?w=400&h=400&fit=crop&crop=face",
       bio: "Growth strategist with proven track record in scaling technology companies across emerging markets. Drives our market expansion and partnership initiatives.",
       expertise: ["Growth Strategy", "Market Expansion", "Partnership Development", "Customer Acquisition"]
     },
     {
       name: "Arham Shah",
-      role: "Chief Financial Officer",
+      role: "CFO",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
       bio: "Financial executive with extensive experience in venture capital and emerging market investments. Oversees financial strategy and investor relations.",
       expertise: ["Financial Strategy", "Investment Analysis", "Risk Management", "Capital Markets"]
