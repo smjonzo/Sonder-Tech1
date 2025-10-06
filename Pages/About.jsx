@@ -24,7 +24,7 @@ export default function About() {
     },
     {
       name: "Musaab Malik",
-      role: "Co-Founder & Operating Partner",
+      role: "Co-Founder & Managing Partner",
       image: <img src={imageMusaab.default} alt="image not found" />,
       bio: "Technical innovator specializing in distributed systems and smart contract development. Expert in scaling blockchain solutions for emerging markets.",
       expertise: ["Blockchain Development", "Smart Contracts", "System Architecture", "Fintech Solutions"]
@@ -34,21 +34,21 @@ export default function About() {
   const keyTeam = [
     {
       name: "Sean Radimer",
-      role: "CDO",
+      role: "CDO (Chief Data Officer)",
       image: <img src={imageSean.default} alt="image not found" />,
       bio: "Data science expert with deep expertise in analytics and machine learning applications for commodity markets. Leads our data strategy and insights platform.",
       expertise: ["Data Analytics", "Machine Learning", "Market Intelligence", "Predictive Modeling"]
     },
     {
       name: "Chelsea Boruff",
-      role: "CGO",
+      role: "CGO (Chief Growth Officer)",
       image: <img src={imageChelsea.default} alt="image not found" />,
       bio: "Growth strategist with proven track record in scaling technology companies across emerging markets. Drives our market expansion and partnership initiatives.",
       expertise: ["Growth Strategy", "Market Expansion", "Partnership Development", "Customer Acquisition"]
     },
     {
       name: "Arham Shah",
-      role: "CFO",
+      role: "CCO (Chief Capital Officer)",
       image: <img src={imageArham.default} alt="image not found" />,
       bio: "Financial executive with extensive experience in venture capital and emerging market investments. Oversees financial strategy and investor relations.",
       expertise: ["Financial Strategy", "Investment Analysis", "Risk Management", "Capital Markets"]
