@@ -4,19 +4,28 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Target, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 
+const imageAman = require("pictures/Aman.jpeg");
+const imageMusaab = require("pictures/Musaab.jpeg");
+const imageSean = require("pictures/Sean.jpeg");
+const imageChelsea = require("pictures/Chelsea.JPEG");
+const imageArham = require("pictures/IMG_1020 (5) (2).JPG");
+const imageLevi = require("pictures/Levi.JPEG");
+const imageMarco = require("pictures/Marco.JPEG");
+const imageUriel = require("pictures/Uriel.JPG");
+
 export default function About() {
   const founders = [
     {
       name: "Aman Solomon",
       role: "Co-Founder & Operating Partner",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: <img src={imageAman.default} alt="image not found" />,
       bio: "Visionary leader with extensive experience in blockchain technology and African markets. Previously led digital transformation initiatives across emerging economies.",
       expertise: ["Blockchain Strategy", "Market Development", "Strategic Partnerships", "Regulatory Affairs"]
     },
     {
       name: "Musaab Malik",
       role: "Co-Founder & Operating Partner",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: <img src={imageMusaab.default} alt="image not found" />,
       bio: "Technical innovator specializing in distributed systems and smart contract development. Expert in scaling blockchain solutions for emerging markets.",
       expertise: ["Blockchain Development", "Smart Contracts", "System Architecture", "Fintech Solutions"]
     }
@@ -26,21 +35,21 @@ export default function About() {
     {
       name: "Sean Radimer",
       role: "CDO",
-      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d402ae8a7ea0c2116f6cc2/5420cc23b_85846171_w47ra7gx2z.pdf",
+      image: <img src={imageSean.default} alt="image not found" />,
       bio: "Data science expert with deep expertise in analytics and machine learning applications for commodity markets. Leads our data strategy and insights platform.",
       expertise: ["Data Analytics", "Machine Learning", "Market Intelligence", "Predictive Modeling"]
     },
     {
       name: "Chelsea Boruff",
       role: "CGO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b2ad?w=400&h=400&fit=crop&crop=face",
+      image: <img src={imageChelsea.default} alt="image not found" />,
       bio: "Growth strategist with proven track record in scaling technology companies across emerging markets. Drives our market expansion and partnership initiatives.",
       expertise: ["Growth Strategy", "Market Expansion", "Partnership Development", "Customer Acquisition"]
     },
     {
       name: "Arham Shah",
       role: "CFO",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+      image: <img src={imageArham.default} alt="image not found" />,
       bio: "Financial executive with extensive experience in venture capital and emerging market investments. Oversees financial strategy and investor relations.",
       expertise: ["Financial Strategy", "Investment Analysis", "Risk Management", "Capital Markets"]
     }
@@ -50,21 +59,21 @@ export default function About() {
     {
       name: "Levi Lillioja",
       role: "Blockchain Engineer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      image: <img src={imageLevi.default} alt="image not found" />,
       bio: "Blockchain engineer specializing in smart contract development and distributed ledger technology. Builds secure and scalable blockchain solutions for commodity tracking.",
       expertise: ["Smart Contract Development", "Solidity", "Blockchain Security", "DApp Development"]
     },
     {
       name: "Marco Mankaryous",
       role: "Head of Business Development",
-      image: "pictures/481D6E62-8470-4F55-BEE2-6DF5FD5C6B84.JPEG",
+      image: <img src={imageMarco.default} alt="image not found" />,
       bio: "Business development leader with proven expertise in forging strategic partnerships and driving growth in emerging markets. Spearheads new market opportunities and client relationships.",
       expertise: ["Business Development", "Strategic Partnerships", "Market Entry", "Client Relations"]
     },
     {
       name: "Uriel Azong",
       role: "Strategic Finance Development",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+      image: <img src={imageUriel.default} alt="image not found" />,
       bio: "Strategic finance professional specializing in financial planning, analysis, and capital allocation. Develops financial strategies that support long-term business growth.",
       expertise: ["Financial Planning", "Strategic Analysis", "Capital Allocation", "Investment Strategy"]
     }
