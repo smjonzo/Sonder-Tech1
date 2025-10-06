@@ -30,10 +30,10 @@ export default function About() {
     {
       name: "Sean Radimer",
       role: "Chief Data Officer",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d402ae8a7ea0c2116f6cc2/5420cc23b_85846171_w47ra7gx2z.pdf",
       bio: "Data science expert with deep expertise in analytics and machine learning applications for commodity markets. Leads our data strategy and insights platform.",
       expertise: ["Data Analytics", "Machine Learning", "Market Intelligence", "Predictive Modeling"],
-      education: "Bachelors in Business, Boston College",
+      education: "Cybersecurity and Finance, Northeastern University",
       location: "Boston, MA"
     },
     {
@@ -52,6 +52,15 @@ export default function About() {
       bio: "Financial executive with extensive experience in venture capital and emerging market investments. Oversees financial strategy and investor relations.",
       expertise: ["Financial Strategy", "Investment Analysis", "Risk Management", "Capital Markets"],
       education: "Bachelors in Business, Boston College",
+      location: "Boston, MA"
+    },
+    {
+      name: "Levi",
+      role: "Blockchain Engineer",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      bio: "Blockchain engineer specializing in smart contract development and distributed ledger technology. Builds secure and scalable blockchain solutions for commodity tracking.",
+      expertise: ["Smart Contract Development", "Solidity", "Blockchain Security", "DApp Development"],
+      education: "Bachelors in Computer Science, Boston College",
       location: "Boston, MA"
     }
   ];
