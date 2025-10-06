@@ -37,7 +37,7 @@ const getPlaceholderImage = (name) => `https://ui-avatars.com/api/?name=${encode
 
 
 // ========== ABOUT PAGE ==========
-function AboutPage() {
+export default function AboutPage() {
   const founders = [
     {
       name: "Aman Solomon",
