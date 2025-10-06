@@ -36,7 +36,7 @@ const newLogoUrl = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/p
 const getPlaceholderImage = (name) => `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=400&background=2d8a9d&color=fff&bold=true`;
 
 // ========== INVEST PAGE ==========
-function InvestPage() {
+export default function InvestPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
