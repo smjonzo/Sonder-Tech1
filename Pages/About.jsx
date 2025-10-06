@@ -57,7 +57,7 @@ export default function About() {
     {
       name: "Marco Mankaryous",
       role: "Head of Business Development",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+      image: "pictures/481D6E62-8470-4F55-BEE2-6DF5FD5C6B84.JPEG",
       bio: "Business development leader with proven expertise in forging strategic partnerships and driving growth in emerging markets. Spearheads new market opportunities and client relationships.",
       expertise: ["Business Development", "Strategic Partnerships", "Market Entry", "Client Relations"]
     },
