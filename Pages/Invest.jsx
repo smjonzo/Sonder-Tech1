@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { InvestmentInterest } from "@/entities/InvestmentInterest";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { InvestmentInterest } from "../Entities/InvestmentInterest";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
+import { Label } from "../components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Alert, AlertDescription } from "../components/ui/alert";
 import { 
   TrendingUp, 
   DollarSign, 
@@ -223,33 +222,35 @@ export default function Invest() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="investment_amount" className="font-semibold">Investment Range</Label>
-                      <Select value={formData.investment_amount} onValueChange={(value) => handleInputChange("investment_amount", value)}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select range" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="under_100k">Under $100K</SelectItem>
-                          <SelectItem value="100k_500k">$100K - $500K</SelectItem>
-                          <SelectItem value="500k_1m">$500K - $1M</SelectItem>
-                          <SelectItem value="1m_5m">$1M - $5M</SelectItem>
-                          <SelectItem value="over_5m">Over $5M</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <select
+                        id="investment_amount"
+                        value={formData.investment_amount}
+                        onChange={(event) => handleInputChange("investment_amount", event.target.value)}
+                        className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-[var(--sonder-dark-text)] shadow-sm focus:border-[var(--sonder-teal)] focus:outline-none focus:ring-2 focus:ring-[var(--sonder-teal)]/40"
+                      >
+                        <option value="">Select range</option>
+                        <option value="under_100k">Under $100K</option>
+                        <option value="100k_500k">$100K - $500K</option>
+                        <option value="500k_1m">$500K - $1M</option>
+                        <option value="1m_5m">$1M - $5M</option>
+                        <option value="over_5m">Over $5M</option>
+                      </select>
                     </div>
                     <div>
                       <Label htmlFor="investor_type" className="font-semibold">Investor Type</Label>
-                      <Select value={formData.investor_type} onValueChange={(value) => handleInputChange("investor_type", value)}>
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Select type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="individual">Individual Investor</SelectItem>
-                          <SelectItem value="institutional">Institutional Investor</SelectItem>
-                          <SelectItem value="family_office">Family Office</SelectItem>
-                          <SelectItem value="vc_fund">VC Fund</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <select
+                        id="investor_type"
+                        value={formData.investor_type}
+                        onChange={(event) => handleInputChange("investor_type", event.target.value)}
+                        className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-[var(--sonder-dark-text)] shadow-sm focus:border-[var(--sonder-teal)] focus:outline-none focus:ring-2 focus:ring-[var(--sonder-teal)]/40"
+                      >
+                        <option value="">Select type</option>
+                        <option value="individual">Individual Investor</option>
+                        <option value="institutional">Institutional Investor</option>
+                        <option value="family_office">Family Office</option>
+                        <option value="vc_fund">VC Fund</option>
+                        <option value="other">Other</option>
+                      </select>
                     </div>
                   </div>
 
