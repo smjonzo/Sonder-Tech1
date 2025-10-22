@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonder Tech - Blockchain Innovation</title>
+    <meta name="description" content="Transforming African commodity markets through blockchain innovation and sustainable technology solutions.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --sonder-teal: #2d8a9d;
+            --sonder-green: #6aa979;
+            --sonder-orange: #f2a649;
+            --sonder-dark-text: #3c4e62;
+            --sonder-light-bg: #f0f5f4;
+            --sonder-light-text: #f8fafc;
+        }
+        
+        .sonder-gradient {
+            background: linear-gradient(135deg, var(--sonder-teal) 0%, var(--sonder-green) 50%, var(--sonder-orange) 100%);
+        }
+        
+        .sonder-text-gradient {
+            background: linear-gradient(135deg, var(--sonder-teal), var(--sonder-green), var(--sonder-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(240, 245, 244, 0.85);
+            border-color: rgba(60, 78, 98, 0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[var(--sonder-light-bg)] text-[var(--sonder-dark-text)]">
+    <div id="root">
+        <!-- Header -->
+        <header class="glass-effect border-b sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <a href="#home" class="flex items-center space-x-3 group">
+                        <img 
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689e48f33b2360ca4ea8053c/968a98002_IMG_2463.JPEG"
+                            alt="Sonder Tech Logo"
+                            class="w-12 h-12 rounded-lg object-cover"
+                        />
+                        <div>
+                            <h1 class="text-2xl font-bold sonder-text-gradient">Sonder Tech</h1>
+                            <p class="text-xs text-slate-600 -mt-1">Blockchain Innovation</p>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 text-[var(--sonder-dark-text)] hover:text-[var(--sonder-teal)] hover:bg-white/60">
+                            <i class="fas fa-chart-line w-4 h-4"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="#about" class="nav-link flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 text-[var(--sonder-dark-text)] hover:text-[var(--sonder-teal)] hover:bg-white/60">
+                            <i class="fas fa-users w-4 h-4"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="#invest" class="nav-link flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 text-[var(--sonder-dark-text)] hover:text-[var(--sonder-teal)] hover:bg-white/60">
+                            <i class="fas fa-dollar-sign w-4 h-4"></i>
+                            <span>Invest</span>
+                        </a>
+                    </nav>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 hover:bg-white/60 rounded-lg transition-colors duration-200">
+                        <i class="fas fa-bars w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="md:hidden py-4 border-t border-white/20 hidden">
+                    <nav class="space-y-2">
+                        <a href="#home" class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg font-medium text-slate-700 hover:bg-white/60">
+                            <i class="fas fa-chart-line w-5 h-5"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="#about" class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg font-medium text-slate-700 hover:bg-white/60">
+                            <i class="fas fa-users w-5 h-5"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="#invest" class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg font-medium text-slate-700 hover:bg-white/60">
+                            <i class="fas fa-dollar-sign w-5 h-5"></i>
+                            <span>Invest</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <!-- Home Section -->
+            <section id="home" class="content-section">
+                <div class="relative py-20 lg:py-32">
+                    <div class="absolute inset-0 sonder-gradient opacity-5"></div>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div class="text-center fade-in">
+                            <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+                                <span class="sonder-text-gradient">Transforming</span>
+                                <br />
+                                <span class="text-[var(--sonder-dark-text)]">African Commodities</span>
+                            </h1>
+                            <p class="text-xl lg:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto">
+                                Harnessing blockchain technology to create transparent, ethical, and efficient commodity markets across Africa.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="#invest" class="bg-[var(--sonder-teal)] hover:bg-[var(--sonder-green)] text-white px-8 py-4 text-lg rounded-full font-medium transition-colors duration-200 flex items-center justify-center mx-auto sm:mx-0">
+                                    Start Investing <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="#about" class="border-2 border-[var(--sonder-dark-text)] px-8 py-4 text-lg rounded-full font-medium hover:bg-[var(--sonder-dark-text)] hover:text-white transition-colors duration-200">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-20 bg-gradient-to-r from-white to-teal-50/20">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-16 fade-in">
+                            <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                                Blockchain <span class="sonder-text-gradient">Innovation</span>
+                            </h2>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="glass-effect border-0 shadow-xl h-full rounded-lg p-8 text-center fade-in">
+                                <div class="w-16 h-16 sonder-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">Immutable Security</h3>
+                                <p class="text-slate-600">Blockchain technology creates tamper-proof records ensuring complete transparency.</p>
+                            </div>
+                            <div class="glass-effect border-0 shadow-xl h-full rounded-lg p-8 text-center fade-in">
+                                <div class="w-16 h-16 sonder-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-globe-africa text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">African Market Focus</h3>
+                                <p class="text-slate-600">Specialized solutions designed for African commodity markets.</p>
+                            </div>
+                            <div class="glass-effect border-0 shadow-xl h-full rounded-lg p-8 text-center fade-in">
+                                <div class="w-16 h-16 sonder-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-bolt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4">Smart Automation</h3>
+                                <p class="text-slate-600">Automated smart contracts streamline transactions and ensure fair compensation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section hidden">
+                <div class="py-20">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-16">
+                            <h1 class="text-5xl font-bold mb-6">
+                                About <span class="sonder-text-gradient">Sonder Tech</span>
+                            </h1>
+                            <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                                We are revolutionizing African commodity markets through innovative blockchain solutions that ensure transparency, fairness, and sustainability.
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                            <div>
+                                <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                                <p class="text-lg text-slate-600 mb-6">
+                                    To create a transparent, efficient, and ethical commodity trading ecosystem that empowers African farmers and traders while ensuring fair compensation and market access.
+                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-2 h-2 bg-[var(--sonder-teal)] rounded-full"></div>
+                                        <span>Blockchain-powered transparency</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-2 h-2 bg-[var(--sonder-green)] rounded-full"></div>
+                                        <span>Sustainable agricultural practices</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-2 h-2 bg-[var(--sonder-orange)] rounded-full"></div>
+                                        <span>Fair trade and ethical sourcing</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glass-effect rounded-lg p-8">
+                                <div class="w-full h-64 sonder-gradient rounded-lg flex items-center justify-center">
+                                    <div class="text-center text-white">
+                                        <i class="fas fa-globe-africa text-6xl mx-auto mb-4"></i>
+                                        <h3 class="text-xl font-bold">African Markets</h3>
+                                        <p class="text-sm opacity-90">Connecting farmers to global markets</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Invest Section -->
+            <section id="invest" class="content-section hidden">
+                <div class="py-20">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-16">
+                            <h1 class="text-5xl font-bold mb-6">
+                                <span class="sonder-text-gradient">Invest</span> in the Future
+                            </h1>
+                            <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                                Join us in transforming African commodity markets through blockchain innovation. Your investment supports sustainable agriculture and fair trade.
+                            </p>
+                        </div>
+
+                        <div class="grid lg:grid-cols-2 gap-12">
+                            <div>
+                                <h2 class="text-3xl font-bold mb-6">Investment Opportunities</h2>
+                                <div class="space-y-6">
+                                    <div class="glass-effect rounded-lg p-6">
+                                        <h3 class="text-xl font-bold mb-3">Agricultural Commodities</h3>
+                                        <p class="text-slate-600">Invest in coffee, cocoa, and other premium African commodities with guaranteed fair trade practices.</p>
+                                    </div>
+                                    <div class="glass-effect rounded-lg p-6">
+                                        <h3 class="text-xl font-bold mb-3">Blockchain Infrastructure</h3>
+                                        <p class="text-slate-600">Support the development of transparent trading platforms and smart contract systems.</p>
+                                    </div>
+                                    <div class="glass-effect rounded-lg p-6">
+                                        <h3 class="text-xl font-bold mb-3">Sustainable Farming</h3>
+                                        <p class="text-slate-600">Fund initiatives that promote sustainable agricultural practices and farmer education.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="glass-effect rounded-lg p-8">
+                                <h2 class="text-2xl font-bold mb-6">Get Started</h2>
+                                <form id="investment-form" class="space-y-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Full Name</label>
+                                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--sonder-teal)] focus:border-transparent" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Email</label>
+                                        <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--sonder-teal)] focus:border-transparent" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Investment Amount</label>
+                                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--sonder-teal)] focus:border-transparent">
+                                            <option value="">Select amount</option>
+                                            <option value="1000-5000">$1,000 - $5,000</option>
+                                            <option value="5000-25000">$5,000 - $25,000</option>
+                                            <option value="25000-100000">$25,000 - $100,000</option>
+                                            <option value="100000+">$100,000+</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Commodity Interest</label>
+                                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--sonder-teal)] focus:border-transparent">
+                                            <option value="">Select commodity</option>
+                                            <option value="coffee">Coffee</option>
+                                            <option value="cocoa">Cocoa</option>
+                                            <option value="cotton">Cotton</option>
+                                            <option value="all">All Commodities</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2">Message</label>
+                                        <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--sonder-teal)] focus:border-transparent" placeholder="Tell us about your investment goals..."></textarea>
+                                    </div>
+                                    <button type="submit" class="w-full bg-[var(--sonder-teal)] hover:bg-[var(--sonder-green)] text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200">
+                                        Submit Investment Interest
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass-effect border-t mt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="text-center">
+                    <div class="flex items-center justify-center space-x-3 mb-4">
+                        <img 
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689e48f33b2360ca4ea8053c/968a98002_IMG_2463.JPEG"
+                            alt="Sonder Tech Logo"
+                            class="w-10 h-10 rounded-lg object-cover"
+                        />
+                        <h3 class="text-xl font-bold sonder-text-gradient">Sonder Tech</h3>
+                    </div>
+                    <p class="text-slate-600 mb-6 max-w-md mx-auto">
+                        Transforming African commodity markets through blockchain innovation and sustainable technology solutions.
+                    </p>
+                    <div class="border-t border-slate-200 pt-6">
+                        <p class="text-sm text-slate-500">
+                            © 2024 Sonder Tech. All rights reserved. Building the future of transparent commodity trading.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+            
+            // Navigation functionality
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Hide all content sections
+                    contentSections.forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    
+                    // Show target section
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.remove('hidden');
+                    }
+                    
+                    // Update active nav link
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('bg-[var(--sonder-dark-text)]', 'text-white');
+                        navLink.classList.add('text-[var(--sonder-dark-text)]');
+                    });
+                    
+                    this.classList.add('bg-[var(--sonder-dark-text)]', 'text-white');
+                    this.classList.remove('text-[var(--sonder-dark-text)]');
+                    
+                    // Close mobile menu
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                });
+            });
+            
+            // Form submission
+            const investmentForm = document.getElementById('investment-form');
+            if (investmentForm) {
+                investmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your interest! We will contact you soon.');
+                });
+            }
+            
+            // Fade in animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
