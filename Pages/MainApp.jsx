@@ -1,3 +1,12 @@
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { TrendingUp, Users, DollarSign, Menu, X } from "lucide-react";
+import HomePage from "./Home";
+import AboutPage from "./About";
+import InvestPage from "./Invest";
+
+const newLogoUrl = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689e48f33b2360ca4ea8053c/968a98002_IMG_2463.JPEG";
+
 // ========== MAIN APP ==========
 export default function SonderWebsite() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -8,6 +17,11 @@ export default function SonderWebsite() {
     { name: "About", icon: Users },
     { name: "Invest", icon: DollarSign },
   ];
+
+rr  // Scroll to top when page changes
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   return (
     <div className="min-h-screen bg-[var(--sonder-light-bg)] text-[var(--sonder-dark-text)]">
