@@ -48,7 +48,7 @@ export default function AboutPage() {
     },
     {
       name: "Musaab Malik",
-      role: "Co-Founder & Managing Partner",
+      role: "Co-Founder & CFO(Chief Financial Offcier)",
       image: getPlaceholderImage("Musaab Malik"),
       bio: "Technical innovator specializing in distributed systems and smart contract development. Expert in scaling blockchain solutions for emerging markets.",
       expertise: ["Blockchain Development", "Smart Contracts", "System Architecture", "Fintech Solutions"]
@@ -210,3 +210,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
