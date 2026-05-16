@@ -6,6 +6,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Alert, AlertDescription } from "../components/ui/alert";
+import { MultiSelectCell } from "../components/ui/multi-select-cell";
 import { 
   TrendingUp, 
   DollarSign, 
@@ -25,7 +26,8 @@ export default function Invest() {
     phone: "",
     investment_amount: "",
     investor_type: "",
-    message: ""
+    message: "",
+    preferred_commodities: []
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -50,7 +52,8 @@ export default function Invest() {
         phone: "",
         investment_amount: "",
         investor_type: "",
-        message: ""
+        message: "",
+        preferred_commodities: []
       });
     } catch (error) {
       setSubmitError("There was an error submitting your information. Please try again.");
@@ -79,6 +82,16 @@ export default function Invest() {
       title: "Risk Mitigation",
       description: "Diversified approach across multiple commodities and stable jurisdictions"
     }
+  ];
+
+
+  const commodityOptions = [
+    { value: "gold", label: "Gold" },
+    { value: "cocoa", label: "Cocoa" },
+    { value: "coffee", label: "Coffee" },
+    { value: "cashew", label: "Cashew" },
+    { value: "cotton", label: "Cotton" },
+    { value: "sesame", label: "Sesame" }
   ];
 
   const projectedReturns = [
@@ -252,6 +265,16 @@ export default function Invest() {
                         <option value="other">Other</option>
                       </select>
                     </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="preferred_commodities" className="font-semibold">Preferred Commodities</Label>
+                    <MultiSelectCell
+                      id="preferred_commodities"
+                      options={commodityOptions}
+                      value={formData.preferred_commodities}
+                      onChange={(values) => handleInputChange("preferred_commodities", values)}
+                    />
                   </div>
 
                   <div>
