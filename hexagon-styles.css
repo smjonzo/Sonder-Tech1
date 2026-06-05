@@ -1,0 +1,24 @@
+/* Hexagon icon styles - add to your global CSS */
+.hexagon-icon {
+  stroke: #3068BD;
+  stroke-width: 2;
+  fill: none;
+  transition: stroke 0.3s ease;
+}
+
+.hexagon-icon:hover {
+  stroke: #FFD700;
+}
+
+/* Alternative hexagon with thicker stroke */
+.hexagon-thick {
+  stroke: #3068BD;
+  stroke-width: 3;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.hexagon-thick:hover {
+  stroke: #FFD700;
+  stroke-width: 4;
+}
